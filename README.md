@@ -13,7 +13,7 @@ Usage:
             <script>
             
     var xml = "<foo name='squidward'><blah>bikini bottom</blah><bar>gary</bar><bar>Crabs</bar></foo>";
-    var obj = badgerfish(xml);
+    var obj = badgerFish(xml);
     obj.foo["@name"] === "squidward"; // true
     obj.foo.blah === "bikini bottom"; // true
     $.isArray(obj.foo.bar); // true
