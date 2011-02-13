@@ -1,8 +1,8 @@
 /*global window $ DOMParser ActiveXObject*/
 
-"use strict";
 (function () {
-    
+    "use strict";
+
     function createXmlDoc(text) {
         var parser, xmlDoc;
         if (window.DOMParser) {
@@ -20,14 +20,14 @@
     function badgerFish(xml) {
         var obj = {}, $el = $(xml);
         
-        if (typeof(xml) === "string") {
+        if (typeof (xml) === "string") {
             $el = $(createXmlDoc(xml));
         }
         
         // handle the simple case where an element
         // has no attributes nor subelements
         if (($el[0].attributes || []).length === 0 &&
-            $el.children().length === 0) {
+                $el.children().length === 0) {
             return $el.text();
         }
         
