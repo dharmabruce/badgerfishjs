@@ -5,8 +5,10 @@ BadgerFish JS is a javascript function that uses jQuery to transform XML into a 
 
 Usage:
 
-    <html>
-        <head>
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
             <title>BadgerFish JS Example</title>
             <script src="jquery.js"></script>
             <script src="badgerfish.js"></script>
