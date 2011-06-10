@@ -32,7 +32,7 @@
         }
         
         // handle attributes
-        $.each($el[0].attributes || [], function (i, value) {
+        $.each($el[0].attributes || [], function (value) {
             obj["@" + value.name] = $el.attr(value.name);
         });
         
@@ -42,7 +42,7 @@
         }
         
         // handle subelements
-        $el.children().each(function (i, element) {
+        $el.children().each(function (element) {
             if (obj[element.tagName] === undefined) {
                 obj[element.tagName] = badgerFish(element);
             } else if ($.isArray(obj[element.tagName])) {
